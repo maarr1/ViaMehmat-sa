@@ -22,13 +22,13 @@ ___
 ___
 ### Команда
 
-### 2 курс
-+ [Фролова Мария Андреевна](https://vk.com/maarr1) :art: :computer: :shipit:
-+ [Бертенева Вероника Владимировна](https://vk.com/id294977280) :art: :computer:
+### 2 курс 
++ [Фролова Мария Андреевна](https://vk.com/maarr1) :art: :computer: :shipit: :video_game:
++ [Бертенева Вероника Владимировна](https://vk.com/id294977280) :art: :computer: :video_game:
 + [Кошеляева Лилия Сергеевна](https://vk.com/id375656516) :art: :computer:
 ### 1 курс
 + [Куликова Алёна Алексеевна](https://vk.com/id697697222) :art: :computer:
-+ [Дятловская Полина Андреевна](https://vk.com/id368911288) :art:
-+ [Жук Екатерина Александровна](https://vk.com/id585960862) :art:
++ [Дятловская Полина Андреевна](https://vk.com/id368911288) :art: :video_game:
++ [Жук Екатерина Александровна](https://vk.com/id585960862) :art: :video_game:
 
     
