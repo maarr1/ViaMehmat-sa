@@ -11,15 +11,13 @@ public class Player : MonoBehaviour
     private Animator animator; // Аниматор
     private SpriteRenderer spriteRenderer; // Спрайт-рендерер
     private Rigidbody2D rigidBody2D; // Ригидбоди
-    private GroundCollider groundCollider; // Коллидер для определения контакта с поверхностью
-
+  
     // Вызывается перед первым кадром
     void Start()
     {
         animator = GetComponent<Animator>(); // Получение компонента Animator
         spriteRenderer = GetComponent<SpriteRenderer>(); // Получение компонента SpriteRenderer
         rigidBody2D = GetComponent<Rigidbody2D>(); // Получение компонента Rigidbody2D
-        groundCollider = GetComponentInChildren<GroundCollider>(); // Получение компонента GroundCollider
     }
 
     // Вызывается каждый кадр
@@ -27,7 +25,6 @@ public class Player : MonoBehaviour
     {
         float movement_x = Input.GetAxis("Horizontal"); // Получение значения горизонтального движения
         // не должно пригодится float movement_y = Input.GetAxis("Vertical"); // Получение значения вертикального движения
-        transform.position += new Vector3(movement_x, 0, 0) Time.deltaTime moveSpeed; // Перемещение персонажа по горизонтали
 
         // Переворачивание спрайта в зависимости от направления движения
         if (movement_x > 0)
@@ -39,17 +36,6 @@ public class Player : MonoBehaviour
             spriteRenderer.flipX = true; // Перевернуть спрайт
         }
 
-        // Анимация ходьбы, если персонаж на земле и двигается
-        if (movement_x != 0 && groundCollider.OnGround())
-        {
-            animator.SetInteger("State", 1); // Запуск анимации ходьбы
-        }
-
-        // Анимация простоя, если персонаж на земле и не двигается
-        if (movement_x == 0 && groundCollider.OnGround())
-        {
-            animator.SetInteger("State", 0); // Запуск анимации простоя
-        }
     }
 
     // Добавление монет к счету
