@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class Crow : MonoBehaviour
 {
-    public float flapForce = 5f; // Сила, с которой воробей взлетает
+    public float flapForce = 5f; // Сила, с которой ворона взлетает
+    public float forwardSpeed = 2f; // Скорость движения вперед
     private Rigidbody2D rb;
     private Animator animator;
 
@@ -15,22 +16,28 @@ public class Crow : MonoBehaviour
     void Update()
     {
         // Проверяем, нажата ли клавиша пробела или ПКМ
-        if (Input.GetButtonDown("Jump") || Input.GetMouseButtonDown(1))
+        if (Input.GetButtonDown("Jump") || Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(0))
         {
             Flap();
         }
+
+        // Двигаем вороны вперед
+        transform.Translate(Vector2.right * forwardSpeed * Time.deltaTime);
     }
 
     void Flap()
     {
-        rb.velocity = Vector2.up * flapForce; // Применяем силу к воробью
+        rb.velocity = Vector2.up * flapForce; // Применяем силу к вороне
         animator.SetTrigger("Fly"); // Запускаем анимацию взлета
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        // Здесь можно обработать логику, когда воробей сталкивается с препятствием
-        Debug.Log("Game Over!");
-        FindObjectOfType<GameManager>().EndGame(); // Вызываем метод завершения игры
+        // Проверяем, столкнулася ли ворона с объектом DeadZone
+        if (other.CompareTag("DeadZone"))
+        {
+            Debug.Log("Game Over!"); // Логируем окончание игры
+            FindObjectOfType<DeadZone>().ShowRestartMenu(); // Вызываем метод рестарта игры
+        }
     }
 }

@@ -4,23 +4,14 @@ using UnityEngine.UI; // Для работы с UI
 
 public class DeadZone : MonoBehaviour
 {
-    public GameObject restartMenu; // Ссылка на меню перезапуска
+    public GameObject RestartMenu; // Ссылка на меню перезапуск
 
-    private void OnTriggerEnter(Collider other)
-    {
-        // Проверяем, если объект, вошедший в зону, является игроком
-        if (other.CompareTag("Crow"))
-        {
-            // Открываем меню перезапуска
-            ShowRestartMenu();
-        }
-    }
 
-    private void ShowRestartMenu()
+    public void ShowRestartMenu()
     {
         // Открываем меню перезапуска
-        restartMenu.SetActive(true);
         Time.timeScale = 0; // Останавливаем игру
+        RestartMenu.SetActive(true);
     }
 
     public void RestartGame()
