@@ -7,6 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решен
 	ProjectSection(SolutionItems) = preProject
 		CameraFollow.cs = CameraFollow.cs
 		Assets\Scripts\FlappyBird\Crow.cs = Assets\Scripts\FlappyBird\Crow.cs
+		Assets\Scripts\FlappyBird\CrowMovement.cs = Assets\Scripts\FlappyBird\CrowMovement.cs
 		Assets\Scripts\FlappyBird\GameManager.cs = Assets\Scripts\FlappyBird\GameManager.cs
 	EndProjectSection
 EndProject
