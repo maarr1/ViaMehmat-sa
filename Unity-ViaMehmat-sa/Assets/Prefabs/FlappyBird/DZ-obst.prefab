@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 115151201329905898}
   - component: {fileID: 5014088258619132181}
-  - component: {fileID: 2983171811180536479}
-  - component: {fileID: 5058808567680502973}
+  - component: {fileID: 2751583636846007702}
+  - component: {fileID: 3909799077920664877}
   m_Layer: 0
   m_Name: DZ-obst
-  m_TagString: DeadZone
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,9 +27,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1383756009046079730}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.94, y: -1.75, z: 0}
-  m_LocalScale: {x: 2.4877, y: 2.4877, z: 2.4877}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.3584836, y: 2.3584836, z: 2.3584836}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 1fa6106be9316c14a9aad85f78a02d9b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e28e6e9a6f6bc9a4aaccf0a518bc8130, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -86,7 +86,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &2983171811180536479
+--- !u!114 &2751583636846007702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383756009046079730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8af2fa028350df4284cdbeeb70b3f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RestartMenu: {fileID: 0}
+--- !u!61 &3909799077920664877
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,16 +144,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 2.56}
   m_EdgeRadius: 0
---- !u!114 &5058808567680502973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1383756009046079730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8af2fa028350df4284cdbeeb70b3f40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  restartMenu: {fileID: 0}
