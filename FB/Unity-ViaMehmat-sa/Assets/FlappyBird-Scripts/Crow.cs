@@ -15,13 +15,13 @@ public class Crow : MonoBehaviour
 
     void Update()
     {
-        // Проверяем, нажата ли клавиша пробела или ПКМ
+        // Проверяем, нажата ли клавиша пробела или П/ЛКМ
         if (Input.GetButtonDown("Jump") || Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(0))
         {
             Flap();
         }
 
-        // Двигаем вороны вперед
+        // Двигаем воронe вперед
         transform.Translate(Vector2.right * forwardSpeed * Time.deltaTime);
     }
 
@@ -31,6 +31,7 @@ public class Crow : MonoBehaviour
         animator.SetTrigger("Fly"); // Запускаем анимацию взлета
     }
 
+    public GameObject congratulationsText;
     private void OnTriggerEnter2D(Collider2D other)
     {
         // Проверяем, столкнулася ли ворона с объектом DeadZone
@@ -39,5 +40,13 @@ public class Crow : MonoBehaviour
             Debug.Log("Game Over!"); // Логируем окончание игры
             FindObjectOfType<DeadZone>().ShowRestartMenu(); // Вызываем метод рестарта игры
         }
+
+        if (other.CompareTag("final")) 
+        {
+            Debug.Log("Win!");
+            // Вызов метода для завершения уровня или отображения поздравления
+            FindObjectOfType<LevelManager>().CompleteLevel();
+        }
     }
+    
 }
