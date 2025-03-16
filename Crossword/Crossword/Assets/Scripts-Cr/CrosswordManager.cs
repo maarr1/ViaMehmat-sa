@@ -27,9 +27,7 @@ public class CrosswordManager : MonoBehaviour
     crosswordGrid.AddWord("ИЗРАИЛЕВИЧ", 3, 0, true); // Горизонтально
     crosswordGrid.AddWord("ЛОПИТАЛЯ", 0, 8, false); // Вертикально
     crosswordGrid.AddWord("ТРИ", 1, 4, false); // Вертикально
-}
     }
-
     private void CreateCrossword()
     {
         for (int i = 0; i < crosswordGrid.Rows; i++)
@@ -48,7 +46,7 @@ public class CrosswordManager : MonoBehaviour
         foreach (var question in crosswordData.questions)
         {
             Debug.Log($"Вопрос: {question.Question} - Ответ: {question.Answer}");
-            // Здесь вы можете добавить код для отображения вопросов в UI
+           
         }
     }
 

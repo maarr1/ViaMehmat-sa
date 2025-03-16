@@ -17,7 +17,7 @@ public class CrosswordGrid
         {
             for (int j = 0; j < columns; j++)
             {
-                Grid[i, j] = ' '; // Или используйте '\0' для обозначения пустой ячейки
+                Grid[i, j] = ' '; 
             }
         }
     }
