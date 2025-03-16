@@ -5,7 +5,6 @@ using UnityEngine;
 public class CrosswordQuestion
 {
     public string Question;
-    
     public string Answer;
 }
 
