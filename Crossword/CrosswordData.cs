@@ -19,7 +19,7 @@ public class CrosswordData : MonoBehaviour
         new CrosswordQuestion { Question = "Чему равна производная от константы?", Answer = "НУЛЮ" },
         new CrosswordQuestion { Question = "Каким методом можно решить систему линейных уравнений?", Answer = "ГАУСА" },
         new CrosswordQuestion { Question = "Как по другому называют 'водопадную' модель процесса создания ПО?", Answer = "КАСКАДНАЯ" },
-        new CrosswordQuestion { Question = "Сколько мест в 120 аудитории?", Answer = "СТО ПЯТЬДЕСЯТ" },
+        new CrosswordQuestion { Question = "Сколько мест в 120 аудитории?", Answer = "150" },
         new CrosswordQuestion { Question = "Кто стоит напротив турникетов внутри Мехмата?", Answer = "СПОТТИ" },
         new CrosswordQuestion { Question = "Какой напиток пользуется у студентов наибольшим спросом?", Answer = "КОФЕ" },
         new CrosswordQuestion { Question = "Назовите отчество того, чьё имя носит МехМат.", Answer = "ИЗРАИЛЕВИЧ" },
