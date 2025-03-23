@@ -12,7 +12,7 @@ public class CrosswordManager : MonoBehaviour
 
     private void Start()
     {
-    crosswordGrid = new CrosswordGrid(12, 14); // Размер сетки 10x10
+    crosswordGrid = new CrosswordGrid(12, 14); 
 
     crosswordGrid.AddWord("МУХ", 6, 11, true); // Горизонтально
     crosswordGrid.AddWord("БАХИЛЫ", 9, 8, true); // Горизонтально
@@ -30,13 +30,24 @@ public class CrosswordManager : MonoBehaviour
     }
     private void CreateCrossword()
     {
+        // Задаем фиксированные размеры ячеек
+        float cellWidth = 1.0f;  // ширина ячейки
+        float cellHeight = 1.0f; // высота ячейки
+
         for (int i = 0; i < crosswordGrid.Rows; i++)
         {
             for (int j = 0; j < crosswordGrid.Columns; j++)
             {
-                GameObject cell = Instantiate(cellPrefab, gridParent);
-                Text cellText = cell.GetComponentInChildren<Text>();
-                cellText.text = crosswordGrid.Grid[i, j].ToString(); // Устанавливаем букву в ячейку
+                // Проверяем, есть ли буква в текущей ячейке
+                if (crosswordGrid.Grid[i, j] != ' ')
+                {
+                    GameObject cell = Instantiate(cellPrefab, gridParent);
+                    Text cellText = cell.GetComponentInChildren<Text>();
+                    cellText.text = crosswordGrid.Grid[i, j].ToString();
+
+                    // Установка позиции ячейки
+                    cell.transform.localPosition = new Vector3(j * cellWidth, -i * cellHeight, 0);
+                }
             }
         }
     }
