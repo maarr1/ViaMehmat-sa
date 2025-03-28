@@ -9,6 +9,9 @@ public class Crow : MonoBehaviour
 
     void Start()
     {
+        // Отзеркаливаем ворону по оси X
+        transform.localScale = new Vector3(-1, 1, 1);
+
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>(); // Получаем компонент Animator
     }
@@ -22,7 +25,7 @@ public class Crow : MonoBehaviour
         }
 
         // Двигаем воронe вперед
-        transform.Translate(Vector2.right * forwardSpeed * Time.deltaTime);
+        transform.Translate(Vector2.left * forwardSpeed * Time.deltaTime);
     }
 
     void Flap()
