@@ -4289,6 +4289,10 @@ PrefabInstance:
       value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2046529367599632626, guid: cca59c27409994a47aff574a9eaf0eac, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046529367599632626, guid: cca59c27409994a47aff574a9eaf0eac, type: 3}
       propertyPath: spawnPointName
       value: SpawnPoint_Left
       objectReference: {fileID: 0}
@@ -4298,7 +4302,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5471603080132170397, guid: cca59c27409994a47aff574a9eaf0eac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.761624
+      value: -6.91
       objectReference: {fileID: 0}
     - target: {fileID: 5471603080132170397, guid: cca59c27409994a47aff574a9eaf0eac, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4340,6 +4344,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "\u0414\u0432\u0435\u0440\u044C \u043B\u0435\u0441\u0442\u043D\u0438\u0446\u044B
         (1)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8293074511018950390, guid: cca59c27409994a47aff574a9eaf0eac, type: 3}
+      propertyPath: m_TagString
+      value: Door
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
