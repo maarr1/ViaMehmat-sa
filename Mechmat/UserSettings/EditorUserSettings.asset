@@ -6,28 +6,28 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedSceneGuid-0:
-      value: 50030653040c5a5d080a0f7a46775e44404f4b7a7c2c7f672b2b4e62e6b96d39
+      value: 010304035c50510a5e0b082111250d4444164f7f7e2b25622e2f4e64e4e4613c
       flags: 0
     RecentlyUsedSceneGuid-1:
-      value: 0700515553530d5d585c0e7712740d441415497b2d7c22637b7f4864e4b8603e
+      value: 575307530057505d5d560f744170064413161e7b7d7e206278794e63e6e4356f
       flags: 0
     RecentlyUsedSceneGuid-2:
-      value: 5000065555530b085f080f2141200f4441151c792a787f347f2c4f30bbb4356e
+      value: 5407015255540c0a5b0d597a45765d444616497275787e362f281b62e6b03268
       flags: 0
     RecentlyUsedSceneGuid-3:
-      value: 0004015004075e58095d5e2745250d4443151e73747b7e697e784a67b1b93261
-      flags: 0
-    RecentlyUsedSceneGuid-4:
-      value: 50010d565351080f555d5b71447b5e44154f19782f7120362c7e4862e6b5653d
-      flags: 0
-    RecentlyUsedSceneGuid-5:
-      value: 5b50525251075a085d580a7a12765d44124f407f7b2975637b794f63e3e5676c
-      flags: 0
-    RecentlyUsedSceneGuid-6:
       value: 0500035e5c065059080f082312265d44414f1a727e7875367b2f4d37bbe53039
       flags: 0
+    RecentlyUsedSceneGuid-4:
+      value: 5507565007040c090c080f7316225d44104e482f2e2e223529781f36e1b5636e
+      flags: 0
+    RecentlyUsedSceneGuid-5:
+      value: 0050010454055e590c0f0e7712260d4410161a73282a7f347a7e4d63e4e6613d
+      flags: 0
+    RecentlyUsedSceneGuid-6:
+      value: 5507570700530a5e5d0d5a7046200644424f4c28297c70347a2f4a62e3b36661
+      flags: 0
     RecentlyUsedSceneGuid-7:
-      value: 5407015255540c0a5b0d597a45765d444616497275787e362f281b62e6b03268
+      value: 5207515e06545c5f080c552749720d44154f1d79752d77607b2a4b6ab3e1633b
       flags: 0
     RecentlyUsedSceneGuid-8:
       value: 060503050653500a59590e7746250f44414f4f7d2e71203229284e64bae36669
@@ -54,3 +54,4 @@ EditorUserSettings:
   m_VCAllowAsyncUpdate: 1
   m_VCScanLocalPackagesOnConnect: 1
   m_ArtifactGarbageCollection: 1
+  m_CompressAssetsOnImport: 1

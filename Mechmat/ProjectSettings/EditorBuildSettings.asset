@@ -65,4 +65,20 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Flappy/FlappyBird-Scenes/FlappyBird.unity
     guid: 7c465e4ab8d962748a84b5564616a5ec
+  - enabled: 1
+    path: Assets/Scenes/Flappy.unity
+    guid: 5d245061ff645084196978d4aaacb549
+  - enabled: 1
+    path: Assets/Scenes/gameScene.unity
+    guid: 96979f1cb5b204b4fa46825ec6b427ab
+  - enabled: 1
+    path: Assets/Scenes/Platf 1.unity
+    guid: ca5b107baab5be24fab9db9d7700ff5e
+  - enabled: 1
+    path: Assets/Scenes/Platf.unity
+    guid: 66caefce0c626c94484be46d7f71a329
+  - enabled: 1
+    path: Assets/Scenes/Flappy 1.unity
+    guid: 16e8ca5deb9e9124c8e39e106c691a7c
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

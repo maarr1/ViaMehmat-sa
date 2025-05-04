@@ -2,49 +2,49 @@ using UnityEngine;
 
 public class Crow : MonoBehaviour
 {
-    public float flapForce = 5f; // Сила, с которой ворона взлетает
-    public float forwardSpeed = 2f; // Скорость движения вперед
+    public float flapForce = 5f; // пїЅпїЅпїЅпїЅ, пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+    public float forwardSpeed = 2f; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
     private Rigidbody2D rb;
     private Animator animator;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>(); // Получаем компонент Animator
+        animator = GetComponent<Animator>(); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Animator
     }
 
     void Update()
     {
-        // Проверяем, нажата ли клавиша пробела или П/ЛКМ
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅ/пїЅпїЅпїЅ
         if (Input.GetButtonDown("Jump") || Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(0))
         {
             Flap();
         }
 
-        // Двигаем воронe вперед
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅe пїЅпїЅпїЅпїЅпїЅпїЅ
         transform.Translate(Vector2.right * forwardSpeed * Time.deltaTime);
     }
 
     void Flap()
     {
-        rb.velocity = Vector2.up * flapForce; // Применяем силу к вороне
-        animator.SetTrigger("Fly"); // Запускаем анимацию взлета
+        rb.linearVelocity = Vector2.up * flapForce; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+        animator.SetTrigger("Fly"); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
     }
 
     public GameObject congratulationsText;
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Проверяем, столкнулася ли ворона с объектом DeadZone
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ DeadZone
         if (other.CompareTag("DeadZone"))
         {
-            Debug.Log("Game Over!"); // Логируем окончание игры
-            FindObjectOfType<DeadZone>().ShowRestartMenu(); // Вызываем метод рестарта игры
+            Debug.Log("Game Over!"); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+            FindObjectOfType<DeadZone>().ShowRestartMenu(); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
         }
 
         if (other.CompareTag("final")) 
         {
             Debug.Log("Win!");
-            // Вызов метода для завершения уровня или отображения поздравления
+            // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             FindObjectOfType<LevelManager>().CompleteLevel();
         }
     }

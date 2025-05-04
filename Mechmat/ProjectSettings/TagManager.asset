@@ -2,20 +2,25 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
+  serializedVersion: 3
   tags:
   - Door
+  - DeadZone
+  - Obstacle
+  - Ground
+  - Death
+  - Manager
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - Sprite
-  - 
-  - 
-  - 
+  - Player
+  - Death
+  - Victory
   - 
   - 
   - 
@@ -45,3 +50,5 @@ TagManager:
   - name: Sprite
     uniqueID: 3647789585
     locked: 0
+  m_RenderingLayers:
+  - Default
